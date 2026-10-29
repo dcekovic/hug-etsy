@@ -1,0 +1,60 @@
+---
+layout: default
+---
+<div class="hero wrap">
+  <h1>Your resale finds, listed on Etsy in minutes</h1>
+  <p class="lead">Snap a photo, add a few details, and {{ site.title }} builds a complete Etsy listing for your vintage and pre-loved items. Less typing, more selling.</p>
+  <a class="btn" href="#signup">Join the waitlist</a>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Built for resellers</h2>
+    <div class="grid">
+      {% for feature in site.data.features %}
+      <div class="card">
+        <div class="icon" aria-hidden="true">{{ feature.icon }}</div>
+        <h3>{{ feature.title }}</h3>
+        <p>{{ feature.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>How it works</h2>
+    <div class="grid">
+      {% for step in site.data.steps %}
+      <div class="card">
+        <span class="step-num">{{ forloop.index }}</span>
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="signup" class="signup">
+  <div class="wrap">
+    <h2>Be the first to try it</h2>
+    <p class="lead">We're building {{ site.title }} now. Leave your email and we'll let you know when it's ready.</p>
+    <form id="signup-form">
+      <label for="email" class="visually-hidden">Email address</label>
+      <input id="email" type="email" required placeholder="you@example.com" autocomplete="email">
+      <button class="btn" type="submit">Notify me</button>
+    </form>
+    <p class="note" id="signup-note" role="status"></p>
+  </div>
+</section>
+
+<script>
+  // Static site: there's no backend yet, so the form only acknowledges the click.
+  document.getElementById('signup-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    document.getElementById('signup-note').textContent = "Thanks! Sign-ups open soon. We're not collecting emails yet.";
+    this.reset();
+  });
+</script>

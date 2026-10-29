@@ -1,7 +1,7 @@
-title: ResaleToEtsy
+title: HugEtsy
 description: Turn your resale stock into Etsy listings in minutes. One item, one form, listed on Etsy.
 url: https://dcekovic.github.io
-baseurl: /resale-to-etsy
+baseurl: /hug-etsy
 
 exclude:
   - README.md

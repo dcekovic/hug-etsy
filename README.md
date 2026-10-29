@@ -1,6 +1,6 @@
-# ResaleToEtsy
+# HugEtsy
 
-Landing page for ResaleToEtsy, a tool that turns resale items into Etsy listings.
+Landing page for HugEtsy, a tool that turns resale items into Etsy listings.
 
 A Jekyll site built and hosted by GitHub Pages. Push to `main` and the site rebuilds in a minute or two.
 
